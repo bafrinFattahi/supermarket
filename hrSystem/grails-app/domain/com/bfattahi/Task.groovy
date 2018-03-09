@@ -1,0 +1,24 @@
+package com.bfattahi
+
+class Task {
+
+String taskName
+int numberOfPeople
+String sectionName
+String department
+String timeRequired
+String description
+boolean taskCompleted
+
+    static constraints = {
+
+taskName blank:false, nullable:false
+numberOfPeople blank:false, nullable:false, min:1, max:20
+sectionName blank:false, nullable:false
+department blank:false, nullable:false
+timeRequired blank:false, nullable:false, size:1..15
+description blank:false, nullable:false, maxSize:5000, widget:'textarea'
+taskCompleted blank:false, nullable:false
+
+    }
+}
