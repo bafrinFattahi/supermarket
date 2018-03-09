@@ -12,13 +12,13 @@ String password
 
     static constraints = {
 
-fullName blank:false, nullable:false
-department blank:false, nullable:false
+fullName blank:false, nullable:false, size:1..20
+department blank:false, nullable:false, size:1..15
 employeeID blank:false, nullable:false, size:1..10
-sectionName blank:false, nullable:false, size:1..30
-officePhone blank:false, nullable:false, size:1..8
-leaderEmail email blank:false, nullable:false, email:true
-password email blank:false, nullable:false
+sectionName blank:false, nullable:false, size:1..15
+officePhone blank:false, nullable:false, size:1..10
+leaderEmail blank:false, nullable:false, email:true
+password blank:false, nullable:false
 
     }
 }

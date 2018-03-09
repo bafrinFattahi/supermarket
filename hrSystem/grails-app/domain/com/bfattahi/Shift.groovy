@@ -2,15 +2,15 @@ package com.bfattahi
 
 class Shift {
 
-enum timeOfDay {Morning, Afternoon, Evening}
-enum dayOfWeek {Sunday, Monday,Tuesday,Wednsday, Thursday, Frdiday, Saturday}
+String timeOfDay  /*{Morning, Afternoon, Evening}*/
+String dayOfWeek  /*{Sunday, Monday,Tuesday,Wednsday, Thursday, Frdiday, Saturday}*/
 int numberOfHours
-enum startingTime {6:00am, 12:00am, 6:00pm} 
+String startingTime 
 
     static constraints = {
 
 timeOfDay blank:false, nullable:false
-dayOfWeek blank:false, nullable:false
+dayOfWeek blabk:false, nullable:false
 numberOfHours blank:false, nullable:false, size:1..10
 startingTime blank:false, nullable:false
 

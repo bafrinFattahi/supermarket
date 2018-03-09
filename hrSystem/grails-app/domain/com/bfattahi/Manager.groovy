@@ -11,7 +11,7 @@ String department
 
     static constraints = {
 
-fullName blank:false, nullable:false
+fullName blank:false, nullable:false, size:1..20
 userName blank:false, nullable:false, unique:true
 password blank:false, nullable:false
 managerEmail blank:false, nullable:false, email:true, unique:true
