@@ -8,6 +8,8 @@ String sectionName
 int officePhone 
 String leaderEmail
 String password
+String userName
+String team
 
 
     static constraints = {
@@ -18,7 +20,9 @@ employeeID blank:false, nullable:false, size:1..10
 sectionName blank:false, nullable:false, size:1..15
 officePhone blank:false, nullable:false, size:1..10
 leaderEmail blank:false, nullable:false, email:true
-password blank:false, nullable:false
+password blank:false, nullable:false, password:true
+userName blank:false, nullable:false, unique: true
+team blank: false, nullable: false
 
     }
 }
