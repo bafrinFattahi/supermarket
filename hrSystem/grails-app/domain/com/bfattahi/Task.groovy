@@ -10,6 +10,14 @@ String timeRequired
 String description
 boolean taskCompleted
 
+
+String toString(){
+return taskName
+}
+
+static hasMany=[shifts:Shift,employees:Employee,teams:Team]
+static belongsTo=[Employee,Team]
+
     static constraints = {
 
 taskName blank:false, nullable:false

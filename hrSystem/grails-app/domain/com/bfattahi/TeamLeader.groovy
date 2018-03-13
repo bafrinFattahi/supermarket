@@ -9,8 +9,14 @@ int officePhone
 String leaderEmail
 String password
 String userName
-String team
+Manager manager
 
+String toString(){
+return fullName
+}
+
+
+static hasMany=[employees:Employee]
 
     static constraints = {
 
@@ -22,7 +28,7 @@ officePhone blank:false, nullable:false, size:1..10
 leaderEmail blank:false, nullable:false, email:true
 password blank:false, nullable:false, password:true
 userName blank:false, nullable:false, unique: true
-team blank: false, nullable: false
+manager blank:false, nullable:false
 
     }
 }

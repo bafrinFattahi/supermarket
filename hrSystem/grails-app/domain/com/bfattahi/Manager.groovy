@@ -9,6 +9,12 @@ String office
 String department 
 
 
+String toString(){
+return fullName
+}
+
+static hasMany=[employees:Employee,teamLeaders:TeamLeader]
+
     static constraints = {
 
 fullName blank:false, nullable:false, size:1..20
