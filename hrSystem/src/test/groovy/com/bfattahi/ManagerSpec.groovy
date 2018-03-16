@@ -11,8 +11,11 @@ class ManagerSpec extends Specification implements DomainUnitTest<Manager> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void ValidatingManager() {
+       when:"A Manager is created with fullName and managerEmail"
+           def manager5= new Manager(fullName:'John Cindery,managerEmail: JohnCindery.com')
+        then: 'Validation should fail'
+         manager5.validate()
+       
     }
 }

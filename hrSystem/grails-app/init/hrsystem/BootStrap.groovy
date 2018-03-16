@@ -44,7 +44,8 @@ def teamleader1=new TeamLeader(
    leaderEmail:'smac@gmail.com',
    password:'secret2017',
    userName:'smacdon',
-   manager:manager3).save() 
+   manager:manager3,
+   team:team1).save() 
 
 def teamleader2=new TeamLeader(
    fullName: 'John Smith',
@@ -55,7 +56,8 @@ def teamleader2=new TeamLeader(
    leaderEmail:'jsmith@gmail.com',
    password:'secret2020',
    userName:'jsmit',
-   manager:manager1).save() 
+   manager:manager1,
+   team:team2).save() 
 
 def teamleader3=new TeamLeader(
    fullName: 'John Rivers',
@@ -66,7 +68,8 @@ def teamleader3=new TeamLeader(
    leaderEmail:'jriver@gmail.com',
    password:'secret2030',
    userName:'jriver',
-   manager:manager2).save() 
+   manager:manager2,
+    team:team1).save() 
 
 
 
@@ -74,7 +77,7 @@ def teamleader3=new TeamLeader(
 
 def team1=new Team(
     teamName: 'Team Loading',
-    numberOfEmployees:10,
+    numberOfEmployees:15,
     sectionName:'Bakery',
     description:'Loading and unloading deliveries',
     teamleader: teamleader3).save()
