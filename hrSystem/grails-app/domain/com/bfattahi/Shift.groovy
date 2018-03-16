@@ -20,7 +20,7 @@ static belongsTo=[Team,Task]
 shiftTitle blank:true, nullable:true
 timeOfDay blank:false, nullable:false
 dayOfWeek blabk:false, nullable:false
-numberOfHours blank:false, nullable:false, size:1..10
+numberOfHours blank:false, nullable:false, size:1..10, min:4, max:10
 startingTime blank:false, nullable:false
 
 

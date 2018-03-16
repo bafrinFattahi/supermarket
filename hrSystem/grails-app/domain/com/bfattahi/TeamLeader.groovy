@@ -12,7 +12,7 @@ String userName
 Manager manager
 
 String toString(){
-return fullName
+return "$fullName,$employeeID,$sectionName"
 }
 
 
@@ -27,7 +27,7 @@ sectionName blank:false, nullable:false, size:1..15
 officePhone blank:false, nullable:false, size:1..10
 leaderEmail blank:false, nullable:false, email:true
 password blank:false, nullable:false, password:true
-userName blank:false, nullable:false, unique: true
+userName blank:false, nullable:false, username:true
 manager blank:false, nullable:false
 
     }

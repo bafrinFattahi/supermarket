@@ -18,6 +18,12 @@ String toString(){
 return fullName
 }
 
+
+double calculateRate(){
+36*horlyRate
+}
+
+
 static hasMany=[tasks:Task,teams:Team]
 
 static belongsTo=[Team]
