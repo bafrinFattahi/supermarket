@@ -10,7 +10,7 @@ String leaderEmail
 String password
 String userName
 Manager manager
-Team team
+
 
 
 String toString(){
@@ -31,6 +31,6 @@ leaderEmail blank:false, nullable:false, email:true
 password blank:false, nullable:false, password:true
 userName blank:false, nullable:false, username:true
 manager blank:false, nullable:false
-team blank:false, nullable:false
+
     }
 }

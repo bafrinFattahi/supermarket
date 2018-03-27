@@ -15,10 +15,10 @@ def manager1=new Manager(
    department:'Grocery').save()
 
 def manager2=new Manager(
-   fullName:'Steve Jerard',
-   userName:'sjerard',
+   fullName:'Andrew Jerard',
+   userName:'ajerard',
    password:'Secret2020',
-   managerEmail:'sjerard@gmail.com',
+   managerEmail:'ajerard@gmail.com',
    office:'B1-901',
    department:'Electronics').save()
 
@@ -44,8 +44,7 @@ def teamleader1=new TeamLeader(
    leaderEmail:'smac@gmail.com',
    password:'secret2017',
    userName:'smacdon',
-   manager:manager3,
-   team:team1).save() 
+   manager:manager2).save() 
 
 def teamleader2=new TeamLeader(
    fullName: 'John Smith',
@@ -56,8 +55,7 @@ def teamleader2=new TeamLeader(
    leaderEmail:'jsmith@gmail.com',
    password:'secret2020',
    userName:'jsmit',
-   manager:manager1,
-   team:team2).save() 
+   manager:manager1).save() 
 
 def teamleader3=new TeamLeader(
    fullName: 'John Rivers',
@@ -68,8 +66,7 @@ def teamleader3=new TeamLeader(
    leaderEmail:'jriver@gmail.com',
    password:'secret2030',
    userName:'jriver',
-   manager:manager2,
-    team:team1).save() 
+   manager:manager1).save() 
 
 
 
@@ -89,21 +86,32 @@ def team2=new Team(
     description:'Packing butcher products',
     teamleader: teamleader2).save()
 
+def team3=new Team(
+    teamName: 'Team Picking',
+    numberOfEmployees:10,
+    sectionName:'Bakery',
+    description:'Picking bakery products',
+    teamleader: teamleader3).save()
+
+
+/*Shift objects go here.*/
 
 def shift1=new Shift(
-  shiftTitle:'Shift A',
-  timeOfDay:'Morning', 
-  dayOfWeek:'Monday,Friday',
-  numberOfHours:4,
-  startingTime:'6:00am').save()
+    shiftTitle:'Shift A',
+    timeOfDay:'Morning', 
+    dayOfWeek:'Monday,Wednesday,Friday',
+    numberOfHours:6,
+    startingTime:'6:00am').save()
 
 def shift2=new Shift(
-  shiftTitle:'Shift B',
-  timeOfDay:'Evening', 
-  dayOfWeek:'Tuesday,Thursday',
-  numberOfHours:6,
-  startingTime:'12:00am').save()
+    shiftTitle:'Shift B',
+    timeOfDay:'Evening', 
+    dayOfWeek:'Tuesday,Thursday',
+    numberOfHours:8,
+    startingTime:'12:00am').save()
 
+
+/*Task objects go here.*/
 
 def task1=new Task(
   taskName:'Replenishing',
@@ -115,74 +123,100 @@ def task1=new Task(
   taskCompleted:'Yes').save()
 
 def task2=new Task(
-  taskName:'Replenishing',
+  taskName:'Butchering',
   numberOfPeople:4,
   sectionName:'Butcher',
   department:'Grocery',
-  timeRequired:'2hours',
-  description:'Replenshing shelves',
+  timeRequired:'3hours',
+  description:'Butchering the lambs',
   taskCompleted:'No').save()
 
 
-
+/*Employee objects go here.*/
 
 def employee1=new Employee(
-  fullName:'Tom Rivers',
-  dateOfBirth:new Date('07/07/1999'),
-  residence:'Sheffield',
-  horlyRate:7.50,
-  employeeID:'E25555',
-  dateEmployed:new Date('07/07/2017'),
-  taxCode:'TAX345',
-  contract:'Full-Time',
-  manager:manager2,
-  teamleader:teamleader3,
-  shift:shift1).save()
+    fullName:'Tom Rivers',
+    dateOfBirth:new Date('07/07/1999'),
+    residence:'Sheffield',
+    horlyRate:7.50,
+    employeeID:'E25555',
+    dateEmployed:new Date('07/07/2017'),
+    taxCode:'TAX345',
+    contract:'Full-Time',
+    manager:manager2,
+    teamleader:teamleader3,
+    shift:shift1).save()
 
 
 def employee2=new Employee(
   fullName:'Sarah Dawson',
   dateOfBirth:new Date('07/07/1998'),
-  residence:'Sheffield',
+  residence:'Barnsley',
   horlyRate:7.50,
   employeeID:'E25556',
   dateEmployed:new Date('07/07/2016'),
   taxCode:'TAX345',
   contract:'Full-Time',
   manager:manager2,
-  teamleader:teamleader2,
+  teamleader:teamleader1,
    shift:shift1).save()
+
+
+def employee3=new Employee(
+  fullName:'Andrew Beckam',
+  dateOfBirth:new Date('07/07/1988'),
+  residence:'Doncaster',
+  horlyRate:7.50,
+  employeeID:'E25522',
+  dateEmployed:new Date('07/07/2017'),
+  taxCode:'TAX345',
+  contract:'Full-Time',
+  manager:manager3,
+  teamleader:teamleader1,
+   shift:shift2).save()
+
 
 
 
 
 manager2.addToEmployees(employee1)
 manager2.addToEmployees(employee2)
- manager3.addToEmployees(employee1) 
+manager3.addToEmployees(employee3) 
+
 
 manager3.addToTeamLeaders(teamleader2)
 manager1.addToTeamLeaders(teamleader3)
 manager1.addToTeamLeaders(teamleader2)
 manager2.addToTeamLeaders(teamleader1)
 
+
 shift1.addToEmployees(employee1)
 shift1.addToEmployees(employee2) 
+shift2.addToEmployees(employee3)
 
 
 task1.addToShifts(shift1)
 task2.addToShifts(shift2)
 
+
 team1.addToShifts(shift1)
+team3.addToShifts(shift1)
 team2.addToShifts(shift2)
+
+
 
 employee1.addToTasks(task1)
 employee2.addToTasks(task1)
+employee3.addToTasks(task2)
 
-team2.addToTasks(task1)
+
+team3.addToTasks(task1)
 team2.addToTasks(task2)
+
 
 team1.addToEmployees(employee1)
 team1.addToEmployees(employee2)
+team2.addToEmployees(employee3)
 
     }
     def destroy = {
