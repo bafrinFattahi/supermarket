@@ -5,7 +5,7 @@ String fullName
 String department
 String employeeID
 String sectionName
-int officePhone 
+String officePhone 
 String leaderEmail
 String password
 //String userName
@@ -15,7 +15,7 @@ Manager manager
 
 String toString(){
 return fullName
- // return "$fullName,$employeeID,$sectionName"
+//return "$fullName,$employeeID,$sectionName"
 }
 
 
