@@ -7,7 +7,7 @@ class ManagerController {
     def login(){
     }
     def validate(){
-    def user=Manager.findByuserName(params.username)
+    def user=Manager.findByUserName(params.username)
     if(user&&user.password ==params.password){
         session.user = user
         render view:'home'

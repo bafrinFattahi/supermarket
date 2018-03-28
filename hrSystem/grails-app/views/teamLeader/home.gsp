@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <asset:stylsheet src="home.css"/>
+    <asset:stylesheet src="home.css"/>
     <title>Kurdistan Supermarket | Home Page</title>
 </head>
 <body>

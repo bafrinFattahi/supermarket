@@ -17,6 +17,7 @@
 
      <div class="row">
        <asset:image src="supermarket_banner.jpg"/>
+       <g:loginToggle />
      </div>
     <g:layoutBody/>
 
