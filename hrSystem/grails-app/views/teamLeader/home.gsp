@@ -26,7 +26,7 @@
 
 </p>
         <button type="button" class="btn btn-success">
-                    <g:link controller = "employee" action = "show"> Display Employees </g:link><br>
+                    <g:link controller = "employee" action = "display"> Display Employees </g:link><br>
                   </button>
       </div>
  <div class="first">
@@ -35,7 +35,7 @@
 
 </p>
         <button type="button" class="btn btn-success">
-                    <g:link controller = "team" action = "show"> Display Teams </g:link><br>
+                    <g:link controller = "team" action = "display"> Display Teams </g:link><br>
                   </button>
       </div>
  <div class="second">
@@ -44,7 +44,7 @@
 
 </p>
         <button type="button" class="btn btn-success">
-                    <g:link controller = "task" action = "show"> Display Tasks </g:link><br>
+                    <g:link controller = "task" action = "display"> Display Tasks </g:link><br>
                   </button>
       </div>
 </div>
