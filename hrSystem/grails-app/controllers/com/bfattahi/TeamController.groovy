@@ -1,6 +1,5 @@
 package com.bfattahi
 
-
 import grails.converters.*
 
 class TeamController {
@@ -10,7 +9,7 @@ class TeamController {
   static allowedMethods = [index:"GET", show:"GET"]
 
       def index(Team team){
-       render Team.list()as XML
+       render Team.list() as JSON
       }
    
 

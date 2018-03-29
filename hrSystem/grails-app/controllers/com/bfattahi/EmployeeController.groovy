@@ -1,6 +1,6 @@
 package com.bfattahi
 
-import grails.converters.*
+import grails.converters.* 
 
 class EmployeeController {
 
@@ -9,9 +9,9 @@ class EmployeeController {
 
    static allowedMethods = [index:"GET", show:"GET"]
 
-      def index(Employee employee){
-       render Employee.list()as XML
-      }
+       def index(Employee employee){
+       render Employee.list() as JSON
+      } 
    
 
      def show(Employee employee){
@@ -21,6 +21,22 @@ class EmployeeController {
      else{ 
         render Employee.list() as JSON
     }
+  } 
+   
+  def advSearch(){
   }
+  def advResultsEmp(){
+   def employeeProps =Employee.metaClass.properties*.name
+   def employees = Employee.withCriteria {
+   "${params.queryType}"{
+     params.each { field, value -> 
+     if (employeeProps.grep(field) && value){
+       ilike(field,value)
+      }
+   }
+  }
+ }
+ return [employees:employees]
+}
 
 }
