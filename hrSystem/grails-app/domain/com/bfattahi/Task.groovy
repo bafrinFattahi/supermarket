@@ -3,7 +3,7 @@ package com.bfattahi
 class Task {
 
 String taskName
-int numberOfPeople
+String numberOfPeople
 String sectionName
 String department
 String timeRequired
@@ -21,7 +21,7 @@ static belongsTo=[Employee,Team]
     static constraints = {
 
 taskName blank:false, nullable:false
-numberOfPeople blank:false, nullable:false, min:1, max:20
+numberOfPeople blank:false, nullable:false
 sectionName blank:false, nullable:false
 department blank:false, nullable:false
 timeRequired blank:false, nullable:false, size:1..15
