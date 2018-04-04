@@ -9,7 +9,7 @@
       <div class="row">
           <h1> Kurdistan Supermarket </h1>
        <formset>
-            <legend> Searh for Employees </legend>
+            <legend> Search for Employees </legend>
          <table> 
              <g:form action="advResultsEmp">
              <tr>

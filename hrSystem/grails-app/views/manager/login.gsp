@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Kurdistan Supermarket Login</title>
+    <title>Kurdistan Supermarket Manager Login</title>
 </head>
 <body>
   
@@ -12,6 +12,11 @@
    <g:form action="validate">
      <input type="hidden" name="cName" value="${cName}">
      <input type="hidden" name="aName" value="${aName}">
+
+    <g:if test="${flash.message}">
+       <div class="message">${flash.message}</div>
+   </g:if>
+     <h2 font-size="42px">Manager Login Area </h2>
      <table>
         <tr class="prop">
           <td class="name">
@@ -32,6 +37,6 @@
             <input type="submit" value="login"/>
           </td></tr>
       </table>
-    </g:form>
+     </g:form>
   </body>
 </html>

@@ -16,7 +16,10 @@
 <body>
 
      <div class="row">
-       <asset:image src="supermarket_banner.jpg"/>
+       <asset:image src="supermarket_banner.jpg" height="300" width="100%"/>
+        <div class="Fifth" align:middle> 
+         <h1 align="middle" font-size=70px> KURDISTAN SUPERMARKET</h1>
+        </div>
        <g:loginToggle />
        <g:loginToggleHome/>
      </div>

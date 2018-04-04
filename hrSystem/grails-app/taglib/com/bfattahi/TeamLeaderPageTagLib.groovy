@@ -16,7 +16,7 @@ class TeamLeaderPageTagLib {
      else{
        out<<"<span style='float:right;margin-right:10px'>"
        out<<"<a href='${createLink(controller:'teamLeader', action:'login')}'>"
-       out<<" Login </a></span>"
+       out<<" Login Team Leader</a></span>"
 }
    out<<"</div></br>"
 }

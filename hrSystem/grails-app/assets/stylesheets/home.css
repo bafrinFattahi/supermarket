@@ -1,7 +1,19 @@
 .first{background-color:#93C0C0}
 .second{background-color:#E2FBFB}
+.third{background-color:#FFD100}
+.fourth{background-color:#FFE570}
+.sixth{background-color:#F05252}
+h1{
+    color:#93C0C0;
+    font-family: Arial;
+}
+h2{
+    color:#0a100e;
+    font-family: Arial;
+    font-size: 36px;
+}
 h3{
-    color:#0000FF;
+    color:#ie3d39;
     font-family: Arial;
 }
 p{ 

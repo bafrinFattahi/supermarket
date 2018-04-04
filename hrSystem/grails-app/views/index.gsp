@@ -33,7 +33,7 @@
                   </button>
               </div>   ---->
             <div class="row">
-               <asset:image src="Main1.jpg" align="middle"/>
+               <asset:image src="Main1.jpg" style="width:100%"/>
             </div> 
              
         </section>
